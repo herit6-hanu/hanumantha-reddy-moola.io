@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automation Tester Portfolio - Playwright, AccelQ, Selenium, Java and TypeScript">
+  <title>Automation Tester | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">&lt;AT /&gt;</a>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" class="theme" aria-label="Toggle theme">☾</button>
+    </nav>
+  </header>
 
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content reveal">
+        <div class="eyebrow">AUTOMATION TESTER • QA ENGINEER</div>
+        <h1>Quality engineered.<br><span>Automation driven.</span></h1>
+        <p class="lead">
+          Automation Tester specializing in <b>Playwright, AccelQ and Selenium</b>,
+          with hands-on experience in <b>Java and TypeScript</b>. I build reliable
+          automated tests that help teams release with confidence.
+        </p>
+        <div class="actions">
+          <a href="#projects" class="btn primary">Explore My Work ↗</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+        <div class="stats">
+          <div><strong>3.5+</strong><small>Years Experience</small></div>
+          <div><strong>3</strong><small>Automation Tools</small></div>
+          <div><strong>2</strong><small>Programming Languages</small></div>
+        </div>
+      </div>
+
+      <div class="code-window reveal">
+        <div class="window-bar"><i></i><i></i><i></i><span>automation.spec.ts</span></div>
+        <pre><code><span class="purple">import</span> { test, expect } <span class="purple">from</span> <span class="green">'@playwright/test'</span>;
+
+test(<span class="green">'verify application login'</span>, 
+  <span class="purple">async</span> ({ page }) => {
+    <span class="purple">await</span> page.goto(<span class="green">'/login'</span>);
+
+    <span class="purple">await</span> page
+      .getByLabel(<span class="green">'Username'</span>)
+      .fill(<span class="green">'tester'</span>);
+
+    <span class="purple">await</span> page
+      .getByRole(<span class="green">'button'</span>, { name: <span class="green">'Login'</span> })
+      .click();
+
+    <span class="purple">await</span> expect(page)
+      .toHaveURL(/dashboard/);
+});</code></pre>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-title reveal">
+        <span>01 — ABOUT ME</span>
+        <h2>Testing software.<br>Building confidence.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            I am an Automation Tester with <strong>3.5+ years of experience</strong>
+            in software testing, specializing in web application automation.
+          </p>
+          <p>
+            My experience covers manual testing and automation, test case design,
+            regression testing, defect lifecycle, Agile/Scrum practices and
+            building maintainable automated test suites.
+          </p>
+          <p>
+            I work with modern automation technologies including
+            <strong>Playwright, AccelQ and Selenium</strong>, using
+            <strong>TypeScript and Java</strong> to create scalable test solutions.
+          </p>
+        </div>
+        <div class="about-list reveal">
+          <div><span>01</span><b>Automation</b><small>Playwright · AccelQ · Selenium</small></div>
+          <div><span>02</span><b>Languages</b><small>TypeScript · Java</small></div>
+          <div><span>03</span><b>Testing</b><small>Functional · Regression · Integration · API · UI</small></div>
+          <div><span>04</span><b>Methodology</b><small>Agile · Scrum · STLC · SDLC</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section dark-section">
+      <div class="section-title reveal">
+        <span>02 — TECHNICAL SKILLS</span>
+        <h2>My automation toolkit.</h2>
+      </div>
+      <div class="skills">
+        <article class="skill reveal"><div class="icon">◈</div><h3>Playwright</h3><p>End-to-end web automation, assertions, fixtures, hooks, parallel execution and HTML/JUnit reporting.</p><label>TypeScript</label></article>
+        <article class="skill reveal"><div class="icon">◎</div><h3>AccelQ</h3><p>Low-code automation, reusable components, end-to-end test cases and AI-assisted automation workflows.</p><label>Automation</label></article>
+        <article class="skill reveal"><div class="icon">◇</div><h3>Selenium</h3><p>WebDriver-based UI automation, reusable frameworks, cross-browser testing and regression suites.</p><label>Java</label></article>
+        <article class="skill reveal"><div class="icon">{} </div><h3>Java</h3><p>Object-oriented programming, test framework development, reusable utilities and automation design.</p><label>Programming</label></article>
+        <article class="skill reveal"><div class="icon">TS</div><h3>TypeScript</h3><p>Strongly typed Playwright automation with clean test structure and maintainable page objects.</p><label>Programming</label></article>
+        <article class="skill reveal"><div class="icon">CI</div><h3>CI / CD</h3><p>Git, GitHub and Jenkins integration for automated execution, artifacts and test reporting.</p><label>Delivery</label></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-title reveal">
+        <span>03 — PROJECTS</span>
+        <h2>Automation that solves real problems.</h2>
+      </div>
+      <div class="projects">
+        <article class="project featured reveal">
+          <div class="number">01</div>
+          <div>
+            <p class="tag">PLAYWRIGHT · TYPESCRIPT · JENKINS</p>
+            <h3>Web Application Automation Framework</h3>
+            <p>
+              End-to-end automation framework for web application regression,
+              designed for maintainability and CI execution.
+            </p>
+            <div class="chips"><span>Playwright</span><span>TypeScript</span><span>Page Objects</span><span>JUnit</span><span>HTML Report</span><span>Jenkins</span></div>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="number">02</div>
+          <p class="tag">ACCELQ · WEB · API</p>
+          <h3>Enterprise Test Automation</h3>
+          <p>End-to-end automated test cases across web and API platforms using reusable automation components.</p>
+          <div class="chips"><span>AccelQ</span><span>Web</span><span>API</span><span>Regression</span></div>
+        </article>
+        <article class="project reveal">
+          <div class="number">03</div>
+          <p class="tag">SELENIUM · JAVA</p>
+          <h3>Regression Automation Suite</h3>
+          <p>Reusable Selenium automation for functional and regression coverage of web applications.</p>
+          <div class="chips"><span>Selenium</span><span>Java</span><span>TestNG</span><span>Cucumber</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section dark-section">
+      <div class="section-title reveal">
+        <span>04 — EXPERIENCE</span>
+        <h2>From test cases to<br>continuous quality.</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-row">
+          <div class="period">3.5+ YEARS</div>
+          <div><h3>Automation Tester / QA Engineer</h3><p>Manual and automation testing for web applications, including test planning, test case creation, execution, defect reporting and regression automation.</p></div>
+        </div>
+        <div class="timeline-row">
+          <div class="period">CORE FOCUS</div>
+          <div><h3>Modern Test Automation</h3><p>Playwright and TypeScript for modern web automation, Selenium and Java for established automation frameworks, and AccelQ for scalable low-code automation.</p></div>
+        </div>
+        <div class="timeline-row">
+          <div class="period">CERTIFICATION</div>
+          <div><h3>AccelQ Automation Expert</h3><p>Certified automation professional with hands-on experience in end-to-end automated test case development.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-box reveal">
+        <span class="eyebrow">05 — LET'S CONNECT</span>
+        <h2>Let's build quality into every release.</h2>
+        <p>Open to opportunities, automation discussions and interesting QA challenges.</p>
+        <div class="actions center">
+          <a class="btn primary" href="mailto:your.email@example.com">Email Me ↗</a>
+          <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <small>Before publishing, replace the placeholder email, LinkedIn and GitHub links in index.html.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Automation Tester</span>
+    <span>Playwright · AccelQ · Selenium · Java · TypeScript</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
